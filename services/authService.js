@@ -11,10 +11,10 @@ class AuthService{
             //TODO: verify password length,etc
 
             //TODO: find user in LDAP
-            let user = new User(req.body.id,req.body.password);
+            let user = new User(req.body.name,req.body.password);
             //TODO: decrypt user password from DB and change this dummy function
-            if(user.password=="Btpn201*" && user.id=='test'){
-                var token = jwt.sign({ id: user.id }, CONSTANTA.secret, {
+            if(user.password=="Btpn201*" && user.name=='test'){
+                var token = jwt.sign({ name: user.name }, CONSTANTA.secret, {
                     expiresIn: 86400 // expires in 24 hours
                 });
                 resolve(token);

@@ -2,8 +2,8 @@
 const MODEL_NAME = 'User';
 
 class User{
-    constructor(id,password){
-        this.id = id;
+    constructor(name,password){
+        this.name = name;
         this.password = password;
     }
 }
